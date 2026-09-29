@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Night Hope Found Sapphire</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@300;400;500&family=Caveat:wght@500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Reusable train drawing -->
+<svg width="0" height="0" style="position:absolute"><symbol id="train" viewBox="0 0 420 56">
+  <path d="M6 14h96q10 0 14 10l6 22H6z" fill="#e9eefc"/><path d="M6 34h116v6H6z" fill="#2a4fa8"/>
+  <rect x="14" y="20" width="18" height="11" rx="2" fill="#f6c977"/><rect x="40" y="20" width="18" height="11" rx="2" fill="#f6c977"/><rect x="66" y="20" width="18" height="11" rx="2" fill="#f6c977"/>
+  <rect x="128" y="14" width="140" height="32" rx="5" fill="#e9eefc"/><rect x="128" y="34" width="140" height="6" fill="#2a4fa8"/>
+  <g fill="#f6c977"><rect x="138" y="20" width="18" height="11" rx="2"/><rect x="164" y="20" width="18" height="11" rx="2"/><rect x="190" y="20" width="18" height="11" rx="2"/><rect x="216" y="20" width="18" height="11" rx="2"/><rect x="242" y="20" width="18" height="11" rx="2"/></g>
+  <rect x="274" y="14" width="140" height="32" rx="5" fill="#e9eefc"/><rect x="274" y="34" width="140" height="6" fill="#2a4fa8"/>
+  <g fill="#f6c977"><rect x="284" y="20" width="18" height="11" rx="2"/><rect x="310" y="20" width="18" height="11" rx="2"/><rect x="336" y="20" width="18" height="11" rx="2"/><rect x="362" y="20" width="18" height="11" rx="2"/><rect x="388" y="20" width="18" height="11" rx="2"/></g>
+  <g fill="#0c1230"><circle cx="30" cy="49" r="5"/><circle cx="90" cy="49" r="5"/><circle cx="150" cy="49" r="5"/><circle cx="250" cy="49" r="5"/><circle cx="300" cy="49" r="5"/><circle cx="395" cy="49" r="5"/></g>
+</symbol></svg>
+
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<button id="music" aria-label="Toggle music">♪ music off</button>
+<audio id="audio" src="music.mp3" loop preload="none"></audio><!-- add your own music.mp3 -->
+
+<!-- Travel bar: a little train follows your scroll from Kerala to Bangalore -->
+<div id="journey" aria-hidden="true"><span>Kerala</span><div class="rail"><svg id="mini"><use href="#train"/></svg></div><span>Bangalore</span></div>
+
+<!-- 1. THE BEGINNING: a moving sunset landscape, never a black screen -->
+<section id="intro" class="scene">
+  <div class="land"><div class="hill h1"></div><div class="hill h2"></div><div class="palms"></div><div class="poles"></div>
+    <svg class="bigtrain"><use href="#train"/></svg><div class="ground"></div></div>
+  <div id="introLines" class="lines"></div>
+  <button id="begin" class="btn hidden">Begin the journey</button>
+</section>
+
+<!-- 2. FIRST GLANCE -->
+<section class="scene">
+  <div class="window r"><div class="pane"><span class="ghost g1"></span></div><div class="pane"><span class="ghost g2"></span></div></div>
+  <p class="r sm">Before we spoke…</p>
+  <p class="r big">life had already left us a clue.</p>
+  <div class="card r tilt1"><p>We were wearing almost the same clothes. Nobody planned it. Just one of those small coincidences life makes.</p><p class="hand">Sometimes life whispers before it speaks.<br>Maybe this was one of those moments.</p></div>
+</section>
+
+<!-- 3. THE CONVERSATION -->
+<section class="scene">
+  <div class="scroll-view r"><div class="hill h1"></div><div class="hill h2"></div><div class="poles"></div><svg class="bigtrain"><use href="#train"/></svg></div>
+  <p class="r big">Inside, a conversation began.</p>
+  <div class="card r tilt2"><p>And somehow every topic felt familiar. The more we talked, the less the stranger was a stranger. Our thoughts connected. Our laughter matched.</p><p class="hand">It didn't feel like keeping a conversation alive. It simply kept finding another reason to continue.</p></div>
+</section>
+
+<!-- 4. THE ₹30 -->
+<section class="scene">
+  <div class="props r">
+    <div class="ticket"><b>TRAIN JOURNEY</b><strong>13 h 35 min</strong><small>Kerala → Bangalore · 15 Sep 2025</small></div>
+    <div class="bottle"></div><div class="note hand">₹30</div>
+  </div>
+  <p class="r">She quietly gave me ₹30 so I could buy a bottle of water.</p>
+  <p class="r big">Years later, people rarely remember the price.<br>They remember the kindness.</p>
+</section>
+
+<!-- 5. 1 A.M. -->
+<section class="scene">
+  <p class="r hand clock">1:00 AM</p>
+  <p class="r">The train grew quiet. Most passengers were asleep. The lights were low, and outside there was only darkness.</p>
+  <p class="r big">Then, without planning it, Hope fell asleep on Sapphire's shoulder.</p>
+  <p class="r">No music. No drama. Just quiet trust.</p>
+  <p class="r big">Some moments become unforgettable because nobody tried to make them special. They simply happened.</p>
+</section>
+
+<!-- 6. TIMELINE -->
+<section class="scene">
+  <div class="card r tilt1"><h2>13 hours and 35 minutes</h2>
+  <ol class="timeline">
+    <li class="r"><span>Beginning</span><em>Two strangers</em></li>
+    <li class="r"><span>Coincidence</span><em>Matching clothes</em></li>
+    <li class="r"><span>Conversations</span><em>Shared laughter</em></li>
+    <li class="r"><span>A small kindness</span><em>₹30</em></li>
+    <li class="r"><span>1:00 AM</span><em>Quiet trust</em></li>
+    <li class="r"><span>Morning</span><em>A memory</em></li>
+  </ol></div>
+</section>
+
+<!-- 7. THE QUESTION -->
+<section class="scene">
+  <p class="r">Morning. People gathered their bags. The train slowed. The talking grew quieter.</p>
+  <p class="r sm">Then Sapphire asked</p>
+  <p class="r q">“Will we meet again?”</p>
+  <p class="r silence">&nbsp;</p>
+</section>
+
+<!-- 8. HOPE & SAPPHIRE -->
+<section class="scene">
+  <div class="r blob hope"><h3>She became Hope,</h3><small>the name he would always associate with something beautiful.</small></div>
+  <div class="r blob sapph"><h3>And he became Sapphire,</h3><small>the name she chose for someone precious.</small></div>
+  <p class="r hand">Perhaps some connections are not meant to be explained, only felt.</p>
+</section>
+
+<!-- 9. LETTER -->
+<section class="scene letter">
+  <div class="card r tilt2">
+    <p>Maybe someday, they'll look back at that night and wonder how something so meaningful began so quietly.</p>
+    <p>It was only a train. Only two strangers. Only one conversation.</p>
+    <p>Yet somewhere between Kerala and Bangalore, between laughter and silence, between shared stories and passing stations, they became part of each other's story.</p>
+    <p>Some people become memories. Some become chapters. And some become the kind of story you quietly carry with you, wherever life takes you.</p>
+  </div>
+  <p class="r">Maybe the universe never promised that Hope and Sapphire would always walk the same road.</p>
+  <p class="r">Maybe it only promised that, on one September night, during thirteen hours and thirty-five minutes, Sapphire would find Hope…</p>
+  <p class="r big">and Hope would find Sapphire too.</p>
+  <button id="heart" class="r" aria-label="Open the last memory"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11a4.6 4.6 0 0 1 8-3 4.6 4.6 0 0 1 8 3c0 5.800-8 11-8 11z"/></svg></button>
+  <p class="r hand">Thank you for being one of the most unexpected and beautiful memories of my journey.</p>
+  <div class="land end r"><div class="hill h1"></div><div class="poles"></div><svg class="bigtrain"><use href="#train"/></svg><div class="ground"></div></div>
+</section>
+
+<div id="secret" aria-hidden="true">
+  <p>Some memories aren't meant to stay in photographs.</p>
+  <p>They stay in people.</p>
+  <p>This one will always belong to us.</p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
